@@ -5,14 +5,16 @@ export default class Team {
   }
 
   [Symbol.iterator]() {
-    let i = 0;
-    const arr = this.team.length;
+    let i = -1;
+    const {
+      team,
+    } = this;
     return {
       next() {
-        if (i < arr) {
+        if (i < team.length) {
           i += 1;
           return {
-            value: this.team[i],
+            value: team[i],
             done: false,
           };
         }

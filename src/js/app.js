@@ -27,4 +27,6 @@ const char3 = {
 };
 
 const ts = new Team(char1, char2, char3);
-console.log(ts.next());
+for (const i of ts) {
+  console.log(i)
+}
